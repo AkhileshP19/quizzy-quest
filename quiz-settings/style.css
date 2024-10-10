@@ -22,7 +22,8 @@
     font-weight: bold;
 }
 
-.loaderDiv {
+.loader-container {
+    height: 100vh; /* Full screen height */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -31,10 +32,8 @@
 .loader {
     border-radius: 50%;
     border: 3px solid gray;
-    border-top: 3px solid transparent; 
-    animation: rotate 1s linear infinite; 
-    margin-left: 50vw;
-    margin-top: 50vh;
+    border-top: 3px solid transparent;
+    animation: rotate 1s linear infinite;
 }
 
 @keyframes rotate {

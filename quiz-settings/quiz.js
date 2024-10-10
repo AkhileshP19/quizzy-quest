@@ -14,6 +14,7 @@ let userAnswers = [];
 const nextQuesBtnDiv = document.querySelector('.nextQuesBtnDiv');
 let quesAndAnsTimeoutId;
 let timebarTimeoutId;
+const loaderContainer = document.querySelector('.loader-container')
 const loader = document.querySelector('.loader');
 let noOfQuesAttempted = 0;
 let arrayToVerifyAnsAttemptedOrNot = new Array(noOfQues).fill(false); // Initialize array to track attempts for each question
@@ -51,6 +52,7 @@ function displayResult(result) {
     
     if (result?.length > 0) {
         loader.classList.add('hide'); 
+        loaderContainer.style.height = '0';
         timebarContainer.classList.remove('hide');
     }
 
@@ -187,13 +189,16 @@ function displayScoreAndSummary(score) {
 
     container.innerHTML = `
         <header class="flex flex-col items-center mb-4 pt-2 md:pt-5 mb-8 bg-[#023047] text-[#fb8500] pb-2">
-            <h1 class="text-4xl md:text-5xl font-extrabold">QuizzyQuest</h1>
+            <div class="flex">
+                <img src="../quizzy-quest-logo.png" class="w-[40px] h-[40px] md:w-[50px] md:h-[50px] rounded-full mr-2" alt="logo">
+                <h1 class="text-4xl md:text-5xl font-extrabold">QuizzyQuest</h1>
+            </div>
             <p class="mt-2 text-lg md:text-xl italic">Unleash Your Knowledge Adventure!</p>
         </header>
     `
 
     container.innerHTML += `
-        <div class="bg-[#023047] p-4 sm:w-[40vw] md:w-[50vw] lg:w-[60vw] font-bold mx-auto text-center rounded">
+        <div class="bg-[#023047] p-4 sm:w-[40vw] md:w-[50vw] lg:w-[60vw] font-bold mx-auto text-center">
             <div>
                 <h1 class="text-[20px] md:text-[26px] text-center font-bold text-white mb-2 underline">Quiz Summary</h1>
                 <div class="text-base md:text-lg">
@@ -208,8 +213,8 @@ function displayScoreAndSummary(score) {
     `;
 
     container.innerHTML += `
-        <div class="flex justify-center md:justify-end mt-4 mr-[5vw]">
-            <div class="flex items-center bg-[#023047] px-2 md:px-4 py-1 rounded">
+        <div class="flex justify-center md:justify-end w-full mt-4 mr-[5vw] rounded">
+            <div class="flex items-center bg-[#023047] px-2 md:px-4 py-1">
                 <div class="mr-2">
                     <img src="coin_thumbnail.png" class="coin w-[30px] h-[30px] md:w-[50px] md:h-[50px]" alt="coin_thumbnail" />
                 </div>
@@ -219,7 +224,6 @@ function displayScoreAndSummary(score) {
             </div>
         </div>
     `
-
 
     for (let i = 0; i < noOfQues; i++) {
         container.innerHTML += `

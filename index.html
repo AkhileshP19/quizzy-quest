@@ -3,13 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/jpeg" sizes="32x32" href="favicon.jpg">
+    <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="build.css">
     <title>QuizzyQuest Homepage</title>
 </head>
 <body class="bg-[#bde0fe]">
     <header class="flex flex-col items-center mb-4 pt-2 md:pt-5 mb-8 bg-[#023047] text-[#fb8500] pb-2">
-        <h1 class="text-4xl md:text-5xl font-extrabold">QuizzyQuest</h1>
+        <div class="flex">
+            <img src="quizzy-quest-logo.png" class="w-[40px] h-[40px] md:w-[50px] md:h-[50px] rounded-full mr-2" alt="logo">
+            <h1 class="text-4xl md:text-5xl font-extrabold">QuizzyQuest</h1>
+        </div>
         <p class="mt-2 text-lg md:text-xl italic">Unleash Your Knowledge Adventure!</p>
     </header>
 
@@ -18,10 +23,10 @@
         <div class="flex justify-center mb-6 md:mb-8">
             <button class="p-2 md:p-3 text-lg md:text-xl bg-[#023047] hover:bg-[#035373] rounded text-white font-bold"><a href="quiz-settings/quiz-settings.html">Get Started</a></button>
         </div>
-        <div class="text-center grid grid-cols-1 xl:grid-cols-2 border border-black p-4 mx-4 mx-4 md:mx-[10%] bg-[#219ebc] text-white">
+        <div class="text-center grid grid-cols-1 xl:grid-cols-2 border border-black p-4 mx-4 md:mx-[10%] bg-[#219ebc] text-white">
             <div>
                 <h2 class="text-xl md:text-2xl font-bold mb-4">Why choose QuizzyQuest?</h2>
-                <div class="sm:mb-5">
+                <div>
                     <ul class="features text-sm md:text-base">
                         <li>Play for free, no sign up required</li>
                         <li>Diverse quiz categories</li>
@@ -32,14 +37,16 @@
                 </div>
             </div>
             <div>
-                <h2 class="text-xl md:text-2xl font-bold mb-4">How it works?</h2>
-                <ul class="working text-sm md:text-base">
-                    <li>1. Click on Get Started</li>
-                    <li>2. Select the no. of questions</li>
-                    <li>3. Select quiz category</li>
-                    <li>4. Select difficulty level</li>
-                    <li>5. Start the quiz</li>
-                </ul>
+                <h2 class="text-xl md:text-2xl font-bold mb-4 mt-3 md:mt-0">How it works?</h2>
+                <div>
+                    <ul class="working text-sm md:text-base">
+                        <li>1. Click on Get Started</li>
+                        <li>2. Select the no. of questions</li>
+                        <li>3. Select quiz category</li>
+                        <li>4. Select difficulty level</li>
+                        <li>5. Start the quiz</li>
+                    </ul>
+                </div>
             </div>
         </div>
         <div class="faq mx-auto w-[90vw] sm:w-[80vw] md:w-[70vw] lg:w-[60vw] p-4 mt-6 bg-[#023047] text-white ">
