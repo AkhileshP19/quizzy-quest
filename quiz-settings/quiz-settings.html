@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Quiz Settings</title>
+</head>
+<body class="bg-[#8ecae6]">
+    <header class="flex flex-col items-center mb-4 pt-2 md:pt-5 mb-8 bg-[#023047] text-[#fb8500] pb-2">
+        <h1 class="text-4xl md:text-5xl font-extrabold">QuizzyQuest</h1>
+        <p class="mt-2 text-lg md:text-xl italic">Unleash Your Knowledge Adventure!</p>
+    </header>
+
+    <main class="border border-black w-[90vw] md:w-[70vw] mx-auto p-4 rounded">
+        <h2 class="text-xl md:text-2xl font-bold text-center">Customize your Quiz</h2>
+        <div class="flex flex-col items-center mt-4 form-div text-base md:text-lg">
+            <form class="form">
+                <div>
+                    <label for="noOfQues">Number of Questions: </label>
+                    <input type="number" name="noOfQues" id="noOfQues" value="10" min="1" max="50" required>
+                </div>
+                <div>
+                    <label for="category">Select Category:</label>
+                    <select name="category" id="category">
+                        <option value="">Any Category</option>
+                        <option value="9">General Knowledge</option>
+                        <option value="10">Entertainment: Books</option>
+                        <option value="11">Entertainment: Films</option>
+                        <option value="12">Entertainment: Music</option>
+                        <option value="13">Entertainment: Musicals & Theatres</option>
+                        <option value="14">Entertainment: Televison</option>
+                        <option value="15">Entertainment: Video Games</option>
+                        <option value="16">Entertainment: Board Games</option>
+                        <option value="17">Science & Nature</option>
+                        <option value="18">Science: Computer</option>
+                        <option value="19">Science: Mathematics</option>
+                        <option value="20">Mythology</option>
+                        <option value="21">Sports</option>
+                        <option value="22">Geography</option> 
+                        <option value="23">History</option> 
+                        <option value="24">Politics</option> 
+                        <option value="25">Art</option> 
+                        <option value="26">Celebrities</option> 
+                        <option value="27">Animals</option> 
+                        <option value="28">Vehicles</option> 
+                        <option value="29">Entertainment: Comics</option> 
+                        <option value="30">Science: Gadgets</option> 
+                        <option value="31">Entertainment: Japanese Anime & Manag</option> 
+                        <option value="32">Entertainment: Cartoon & Animations</option> 
+                    </select>
+                </div>
+                <div>
+                    <label for="difficulty">Select Difficulty: </label>
+                    <select name="difficulty" id="difficulty">
+                        <option value="">Any Difficulty</option>
+                        <option value="easy">Easy</option>
+                        <option value="medium">Medium</option>
+                        <option value="hard">Hard</option>
+                    </select>
+                </div>
+                <div class="flex items-centers justify-center m-4">
+                    <button type="submit" class="submitBtn p-2 md:p-3 text-lg md:text-xl bg-[#023047] hover:bg-[#035373] rounded text-xl text-white font-bold">Start Quiz</button>
+                </div>
+            </form>
+        </div>
+    </main>
+
+    <script src="quiz-settings.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+</body>
+</html>

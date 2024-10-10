@@ -1,0 +1,44 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.logo {
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+}
+
+.features li, .working li {
+    margin: 6px;
+}
+
+.faq-item {
+    margin-bottom: 10px;
+}
+
+.ques {
+    cursor: pointer;
+}
+
+.ans {
+    display: none;
+    background-color: #219ebc;
+    padding: 4px;
+    margin-top: 2px;
+}
+
+.active {
+    display: block;
+}
+
+ul li {
+    background-color: #023047;
+    padding: 10px;
+    color: white;
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+

@@ -1,0 +1,77 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.form input {
+    width: 100%;
+    margin-top: 8px;
+    padding: 6px;
+    margin-bottom: 15px;
+}
+
+.form select {
+    width: 100%;
+    margin-top: 8px;
+    padding: 6px;
+    margin-bottom: 15px;
+}
+
+.form-div label {
+    font-weight: bold;
+}
+
+.loaderDiv {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.loader {
+    border-radius: 50%;
+    border: 3px solid gray;
+    border-top: 3px solid transparent; 
+    animation: rotate 1s linear infinite; 
+    margin-left: 50vw;
+    margin-top: 50vh;
+}
+
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.hide {
+    display: none;
+}
+
+body .container {
+    width: 100vw; /* Ensure full viewport width */
+    max-width: 100%; /* Prevent overflow */
+    padding: 0; /* Remove padding if there's any */
+    margin: 0 auto;
+    overflow-x: hidden;
+}
+
+
+.coin {
+    animation: spinY 3s infinite linear;
+}
+
+/* Keyframe for spinning around the Y-axis */
+@keyframes spinY {
+    0% {
+        transform: rotateY(0deg);
+    }
+    100% {
+        transform: rotateY(360deg);
+    }
+}
+
+
+
